@@ -1,0 +1,99 @@
+:root {
+  --fonst-size: 30;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-size: var(--fonst-size);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2rem auto 2rem;
+  grid-template-rows: 20% auto 10%;
+}
+.header {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.playground {
+  grid-row: 2;
+  grid-column: 2;
+
+  border: solid black 0.5rem;
+
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  align-items: center;
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: black solid 1px;
+  height: 100%;
+}
+
+.game-header-item {
+  font-size: inherit;
+  text-align: center;
+  vertical-align: middle;
+  flex-basis: 100%;
+  padding-top: 2rem; /* toDo: anders lösen!! */
+  height: 100%;
+}
+
+.fails-wrapper {
+  border-inline: black solid 1px;
+}
+
+#btn-newGame {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  font-size: inherit;
+}
+
+.word {
+  text-align: center;
+  height: 100%;
+  padding-top: 8rem; /* toDo: anders lösen!! */
+}
+
+.keyboard {
+  height: 100%;
+  padding-inline: 1rem;
+}
+
+.btn-letter {
+  margin: 0.5rem;
+  font-size: 2rem;
+}
+
+.active {
+  color: blueviolet;
+  transform: scale(1.5) rotate(0 deg);
+}
+
+.win {
+  color: green;
+  transform: rotate(-20deg) scale(1, 2);
+  transition: transform 2s ease-in-out;
+}
+
+.loose {
+  color: red;
+  transform: rotate(-20deg) scale(1, 2);
+  transition: transform 2s ease-in-out;
+}

@@ -9,6 +9,21 @@
 </head>
 
 <body>
+    <header class="header">
+        <h1>Hangman</h1>
+    </header>
+    <main class="playground">
+        <header class="game-header">
+            <div class="game-header-item" id="status">active</div>
+            <div class="game-header-item fails-wrapper">fails: <span id="fails">0/10</span></div>
+            <div class="game-header-item">
+                <button id="btn-newGame">new game</button>
+            </div>
+        </header>
+        <div class="word" id="word">_ _ _ _</div>
+        <div class="keyboard" id="keyboard">
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 
